@@ -26,7 +26,6 @@ export default class MapModule extends React.Component{
 
     handleApiAvaliable = ymaps => {
         this.ymaps = ymaps;
-        console.log(this.ymaps);
     };
 
     addRoute = () => {
