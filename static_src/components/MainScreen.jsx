@@ -27,7 +27,7 @@ render(){
 	this.loaddingRedirect();
 	return (
 	<div className='mainScreen' >
-		<img src={logo} className="logo"/>
+	<div className="logo"><p>Park</p><div className="switch"><p className="circleText">ON</p><span className="switchCircle"></span></div></div>
 		</div>
 	);
   }

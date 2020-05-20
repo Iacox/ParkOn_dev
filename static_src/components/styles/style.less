@@ -32,26 +32,89 @@ height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  animation:mainscreen 1s ease-in;
-  .logo{
-    display: block;
-    width: 180px;
+  animation:mainscreen 500ms ease-in;
+  .logo{ 
+    p{
+      margin:0 3px 0 0;
+      font-weight: bold;
+      line-height: 45px;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
     height: 45px;
-    animation-duration: 1.5s;
+    font-size: 26px;
+    animation-duration: 1s;
     margin: auto auto;
     animation-name: logo;
+    .switch{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 90px;
+      height: 48px;
+      position: relative;
+      line-height: 48px;
+      background-color:#44F1A6;
+      border-radius: 50px;
+      text-align: left;
+      animation:switchBackground 2000ms ease-in-out;
+      @keyframes switchBackground{
+        0%{
+          background-color:gray;
+        }
+        65%{
+          background-color:gray;
+        }
+        100%{
+          background-color:#44F1A6;
+        }
+      }
+      .circleText{
+      position: absolute;
+      top: 0;
+      left: 5px;
+      opacity: 1;
+      color: white;
+      animation:switchText 2000ms ease-in;
+      @keyframes switchText{
+        0%{
+          opacity: 0;
+        }
+        80%{
+          opacity: 0;
+        }
+        100%{
+          opacity:1;
+        }
+      }
+      }
+      .switchCircle{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left:42px;
+        margin: 3px;
+        width: 42px;
+        height: 42px;
+        background-color: white;
+        border-radius: 50%;
+        animation:switchCircle 1500ms ease-in running,paused;
+        @keyframes switchCircle {
+          0%{
+          left: 0;
+          }
+          70%{
+          left: 0;
+          }
+          100%{
+            left:42px;
+          }
+        }
+      }
+    }
   }
-   @keyframes logo{
-    from{
-    opacity:0;
-    }
-    to{
-    opacity:1;
-    }
-    70%{
-    opacity: 0;
-    }
-  } 
 }
 
 
@@ -75,7 +138,7 @@ height: 100%;
   line-height: 30px;
   text-align: center;
   margin:0;
-  animation:"welcomeAnimation" 1s ease-in;
+  animation:welcomeAnimation 1s ease-in;
     @media screen and (min-width: 375px) {
     font-size: 26px;
     }
@@ -383,10 +446,10 @@ display: block;
 width: 115px;
 height: 130px;
 left: calc(50% - 115px/2 + 92.5px);
-background: linear-gradient(224.42deg, #2FE89A 0%, #2B3569 100%);
+  background: linear-gradient(244deg, #2FE89A, #2B3569);
 border-radius: 40px 1px;
 margin: auto 10px;
-  } 
+} 
 
   .gradient_photo{
   display: block;

@@ -30,39 +30,141 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-animation: mainscreen 1s ease-in;
-          animation: mainscreen 1s ease-in;
+  -webkit-animation: mainscreen 500ms ease-in;
+          animation: mainscreen 500ms ease-in;
 }
 .mainScreen .logo {
-  display: block;
-  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   height: 45px;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  font-size: 26px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   margin: auto auto;
   -webkit-animation-name: logo;
           animation-name: logo;
 }
-@-webkit-keyframes logo {
-  from {
-    opacity: 0;
+.mainScreen .logo p {
+  margin: 0 3px 0 0;
+  font-weight: bold;
+  line-height: 45px;
+}
+.mainScreen .logo .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90px;
+  height: 48px;
+  position: relative;
+  line-height: 48px;
+  background-color: #44F1A6;
+  border-radius: 50px;
+  text-align: left;
+  -webkit-animation: switchBackground 2000ms ease-in-out;
+          animation: switchBackground 2000ms ease-in-out;
+}
+@-webkit-keyframes switchBackground {
+  0% {
+    background-color: gray;
   }
-  to {
-    opacity: 1;
+  65% {
+    background-color: gray;
   }
-  70% {
-    opacity: 0;
+  100% {
+    background-color: #44F1A6;
   }
 }
-@keyframes logo {
-  from {
+@keyframes switchBackground {
+  0% {
+    background-color: gray;
+  }
+  65% {
+    background-color: gray;
+  }
+  100% {
+    background-color: #44F1A6;
+  }
+}
+.mainScreen .logo .switch .circleText {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  opacity: 1;
+  color: white;
+  -webkit-animation: switchText 2000ms ease-in;
+          animation: switchText 2000ms ease-in;
+}
+@-webkit-keyframes switchText {
+  0% {
     opacity: 0;
   }
-  to {
+  80% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
-  70% {
+}
+@keyframes switchText {
+  0% {
     opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mainScreen .logo .switch .switchCircle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 42px;
+  margin: 3px;
+  width: 42px;
+  height: 42px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-animation: switchCircle 1500ms ease-in running, paused;
+          animation: switchCircle 1500ms ease-in running, paused;
+}
+@-webkit-keyframes switchCircle {
+  0% {
+    left: 0;
+  }
+  70% {
+    left: 0;
+  }
+  100% {
+    left: 42px;
+  }
+}
+@keyframes switchCircle {
+  0% {
+    left: 0;
+  }
+  70% {
+    left: 0;
+  }
+  100% {
+    left: 42px;
   }
 }
 .welcomeScreen {
@@ -97,8 +199,8 @@ body {
   line-height: 30px;
   text-align: center;
   margin: 0;
-  -webkit-animation: "welcomeAnimation" 1s ease-in;
-          animation: "welcomeAnimation" 1s ease-in;
+  -webkit-animation: welcomeAnimation 1s ease-in;
+          animation: welcomeAnimation 1s ease-in;
 }
 @media screen and (min-width: 375px) {
   .welcomeScreen .welcomeText {
@@ -489,7 +591,7 @@ body {
   width: 115px;
   height: 130px;
   left: calc(85%);
-  background: linear-gradient(224.42deg, #2fe89a 0%, #2b3569 100%);
+  background: linear-gradient(244deg, #2fe89a, #2b3569);
   border-radius: 40px 1px;
   margin: auto 10px;
 }
