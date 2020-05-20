@@ -11,7 +11,6 @@ import EmailValidation from './EmailValidation';
 import logo from "./img/logo.png";
 import Training from "./Training";
 import Letstraining from "./Letstraining";
-import Personal from "./Personal";
 import Feedback from "./Feedback";
 import Changereg from "./Changereg";
 import Emailregistration from "./Emailregistration";
@@ -75,9 +74,6 @@ render(){
 						<Letstraining/>
 					</Route>
 
-					<Route path="/Personal">
-						<Personal/>
-					</Route>
 
 					<Route path="/Feedback">
 						<Feedback userID={this.state.userID}/>
