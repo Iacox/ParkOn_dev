@@ -8,6 +8,7 @@ import findme from "./img/someicon.png";
 import plus from "./img/plus.png";
 import MapModule from './MapModule';
 
+
 export default class Letstraining extends React.Component {
 
 
@@ -16,66 +17,68 @@ export default class Letstraining extends React.Component {
         return(
        <div className="mainadvise">
             <div className="advice ">
-              
+            <div className="adviceText">
+            Камеры ParkOn. 
+Зеленый цвет - свободно
+Красный - мест нет 
+Цифрами указано 
+количество мест. Нажав на иконку вы можете посмотреть трансляцию с камеры 
+              </div>
+              <div className="red_green_icons">
+
+              <div className="redicon">
+                    <img className="ico" src={camera}/>
+                    <br/>
+                    <p className="num"></p>
+                  </div>
+
               <div className="greenicon">
                 <img className="ico" src={camera}/>
                 <br/>
                 <p className="num">9+</p>
-              </div>
-         
-              <div className="adviceText">
-                Иконка на карте указывает на наличие камеры ParkOn
-                Зеленый цвет указывает на наличие свободных мест
-              </div>
+
+
+</div>
+  </div>
+    </div>
+
+
+<div className="advice">
+  <div className="gradient_home">
+    <div className="home_main">
+      <div className="home"></div>
+        </div>
+     </div>
+
+<div className="advice">
+  <div className="adviceText">
+                  Кнопка “Домой” -быстрый доступ к информации по парковочным местам рядом с домом. Сохранить или изменить адрес дома можно в личном кабинете
+      </div>        
+        </div> 
+           </div>
+
+           <div className="advice">
+  <div className="adviceText">
+  Быстрый доступ к поиску
+   адреса места парковки
+    с 
+    помощью голоса   
+    </div>
+
+  <div className="gradient_photo">
+    <div className="micro_main">
+      <div className="micro">
+        
+      </div>
+        </div>
+     </div>      
+</div>
+
             
-            </div>
-              
-              <div className="advice">
 
-                  <div className="redicon">
-                    <img className="ico" src={camera}/>
-                    <br/>
-                    <p className="num">0</p>
-                  </div>
-
-                  <div className="adviceText">
-                      Красный же на их отсутствие. Цифрами указано кол-во свободных мест, нажав на иконку вы можете посмотреть трансляцию с камеры.
-                  </div> 
-               
-               </div>
-
-              <div className="advice">
-                  
-                  <div className="zoom">
-                    <div className="circle circle__plus"></div>
-                    <div className="circle circle__minus"></div>
-                  </div>
-                    
-            
-                  <div className="adviceText">
-                    Иконки мастштабирования карты. Так же можно управлять масштабом
-                    двумя пальцами, сужая и разводя их на экране смартфона.
-                  </div>        
-              </div> 
 
                           
                           
-
-              <div className="advice">
-                
-                <div className="find">
-                    
-                    <img className="findIcon" src={findme}/>
-                  </div> 
-                    
-                    <div className="adviceText">
-                      Иконка определения Вашего местоположения на карте.
-                      Нажимая на нее в первый раз, пожалуйста, предоставьте
-                      разрешение приложению.               
-                    
-                </div>
- 
-              </div>
  
               <Link to="/MapModule" className="done">
                  Завершить

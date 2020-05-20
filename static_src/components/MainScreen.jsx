@@ -24,7 +24,7 @@ dataFetch = () => {
 
 
 render(){
-	// this.loaddingRedirect();
+	this.loaddingRedirect();
 	return (
 	<div className='mainScreen' >
 		<img src={logo} className="logo"/>

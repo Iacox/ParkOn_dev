@@ -3,7 +3,7 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 .App {
   height: 100%;
@@ -35,8 +35,8 @@ body {
 }
 .mainScreen .logo {
   display: block;
-  width: 150px;
-  height: 40px;
+  width: 180px;
+  height: 45px;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   margin: auto auto;
@@ -68,7 +68,7 @@ body {
 .welcomeScreen {
   display: block;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,6 +96,7 @@ body {
   font-size: 22px;
   line-height: 30px;
   text-align: center;
+  margin: 0;
   -webkit-animation: "welcomeAnimation" 1s ease-in;
           animation: "welcomeAnimation" 1s ease-in;
 }
@@ -124,6 +125,7 @@ body {
   display: inline-block;
   width: 280px;
   text-align: center;
+  margin: 0;
   font-size: 26px;
 }
 @media screen and (min-width: 375px) {
@@ -176,9 +178,8 @@ body {
   }
 }
 .loginLinksRow .loginLink:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2fe89a), to(#2b3569));
-  background: linear-gradient(180deg, #2fe89a 0%, #2b3569 100%);
-  color: white;
+  background-color: transparent;
+  color: #44f1a6;
   border: 1px solid #44f1a6;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
@@ -210,8 +211,14 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  padding-top: 50px;
   -webkit-animation: "loginScreen" 0.5s ease-in;
           animation: "loginScreen" 0.5s ease-in;
+}
+@media screen and (min-width: 375px) {
+  .loginScreen {
+    padding-top: 120px ;
+  }
 }
 @-webkit-keyframes loginScreen {
   from {
@@ -232,17 +239,12 @@ body {
 .loginScreen .registration {
   display: block;
   text-align: center;
-  width: 90%;
-  padding: 50px 5%;
   font-size: 22px;
 }
-@media screen and (min-width: 375px) {
-  .loginScreen .registration {
-    padding: 80px auto 70px auto;
-  }
-}
 .loginScreen .registration h3 {
+  margin: 0;
   font-weight: normal;
+  font-size: 26px;
 }
 .loginScreen .regwrapper {
   display: block;
@@ -256,7 +258,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding-bottom: 20px;
+  padding: 50px 0 50px 0;
   text-align: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -368,24 +370,13 @@ body {
 }
 @media screen and (min-width: 375px) {
   .training {
-    padding-top: 150px;
+    padding-top: 120px;
   }
 }
 .training h3 {
   text-align: center;
   font-weight: bold;
   margin: 0;
-}
-.trainingWelcome {
-  display: block;
-  width: 237px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 30px;
-  text-align: center;
-  padding: 58px 40px 72px 40px;
 }
 .mainadvise {
   display: -webkit-box;
@@ -415,8 +406,7 @@ body {
 }
 .done {
   background-color: #44f1a6;
-  color: black;
-  font-weight: bold;
+  color: white;
   margin-bottom: 272px;
   display: block;
   width: 266px;
@@ -427,10 +417,6 @@ body {
   border: none;
   border-radius: 10px;
   text-align: center;
-}
-.done:hover {
-  background: linear-gradient(224.42deg, #2fe89a 0%, #2b3569 100%);
-  color: white;
 }
 @media screen and (min-width: 375px) {
   .done {
@@ -831,6 +817,105 @@ body {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+.feedback {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.feedback_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  padding-top: 18px;
+}
+.feedback textarea {
+  width: 80%;
+  height: 50%;
+  border-radius: 4px;
+}
+@media screen and (min-width: 375px) {
+  .feedback textarea {
+    width: 80%;
+    height: 50%;
+    margin: 30px auto;
+  }
+}
+.feedback_logo img {
+  display: inline-block;
+  width: 125px;
+  height: 30px;
+}
+.topRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 320px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.close {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  display: block;
+  position: relative;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: black;
+}
+.close:before {
+  top: 0px;
+  right: -15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.close:after {
+  top: -32px;
+  right: -15px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 .feedbackText {
   display: block;
   height: 23px;
@@ -849,10 +934,9 @@ body {
 }
 .send_it {
   display: inline-block;
-  width: 266px;
+  width: 80%;
   height: 40px;
   line-height: 30px;
-  margin: 10px 25px;
   border: 2px solid #44f1a6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -862,13 +946,14 @@ body {
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
-  margin-bottom: 35px;
+  margin-bottom: 70px;
   color: #44f1a6;
 }
 @media screen and (min-width: 375px) {
   .send_it {
-    width: 405px;
-    height: 60px;
+    width: 80%;
+    height: 40px;
+    margin-bottom: 80px;
   }
 }
 .send_it a {
@@ -1048,7 +1133,29 @@ body {
   }
 }
 #Stream .streamActions__button {
+  display: inline-block;
+  width: 90%;
+  height: 40px;
   margin: 0 auto;
+  padding: 0 5%;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #44f1a6;
   opacity: 1;
+}
+@media screen and (min-width: 375px) {
+  #Stream .streamActions__button {
+    font-size: 18px;
+  }
+}
+#Stream .streamActions__button p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  line-height: 40px;
+  text-align: center;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
