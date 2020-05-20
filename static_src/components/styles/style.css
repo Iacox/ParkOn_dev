@@ -371,17 +371,6 @@ body {
   font-weight: bold;
   margin: 0;
 }
-.trainingWelcome {
-  display: block;
-  width: 237px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 30px;
-  text-align: center;
-  padding: 58px 40px 72px 40px;
-}
 .mainadvise {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,34 +477,55 @@ body {
     opacity: 1;
   }
 }
-.greenicon {
+.advice .greenicon {
   display: block;
-  background: url(/static_src/components/img/markGreen.png) no-repeat;
+  background: url(/static_src/components/img/markGreen.png) center no-repeat;
+  background-size: auto;
   width: 39px;
   height: 48px;
   text-align: center;
   margin: auto 10px;
 }
-.ico {
+@media screen and (min-width: 375px) {
+  .advice .greenicon {
+    width: 55px;
+    height: 65px;
+    padding: 5px 0 0 0;
+  }
+}
+.advice .redicon {
+  display: block;
+  background: url(/static_src/components/img/markRed.png) center no-repeat;
+  background-size: auto;
+  width: 39px;
+  height: 49px;
+  text-align: center;
+  margin: auto 10px;
+}
+@media screen and (min-width: 375px) {
+  .advice .redicon {
+    width: 55px;
+    height: 65px;
+    padding: 5px 0 0 0;
+  }
+}
+.advice .ico {
   display: inline-block;
   padding-top: 7px;
 }
-.num {
+@media screen and (min-width: 375px) {
+  .advice .ico {
+    padding-top: 14px;
+  }
+}
+.advice .num {
   display: inline-block;
   text-align: center;
   font-size: 14px;
   margin: 0;
   padding: 0;
 }
-.redicon {
-  display: block;
-  background: url(/static_src/components/img/markRed.png) no-repeat;
-  width: 39px;
-  height: 49px;
-  text-align: center;
-  margin: auto 10px;
-}
-.zoom {
+.advice .zoom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,9 +538,15 @@ body {
           justify-content: flex-start;
   width: 39px;
   height: 96px;
-  margin: auto 10px;
+  margin: auto;
 }
-.circle {
+@media screen and (max-width: 375px) {
+  .advice .zoom {
+    width: 50px;
+    height: 116px;
+  }
+}
+.advice .zoom .circle {
   display: block;
   position: relative;
   width: 32px;
@@ -541,7 +557,13 @@ body {
   -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
 }
-.circle__plus:before {
+@media screen and (min-width: 375px) {
+  .advice .zoom .circle {
+    width: 42px;
+    height: 42px;
+  }
+}
+.advice .zoom .circle__plus:before {
   display: block;
   content: " ";
   width: 18px;
@@ -552,7 +574,13 @@ body {
   top: 45%;
   left: 19%;
 }
-.circle__plus:after {
+@media screen and (min-width: 375px) {
+  .advice .zoom .circle__plus:before {
+    top: 50%;
+    left: 25%;
+  }
+}
+.advice .zoom .circle__plus:after {
   display: block;
   content: " ";
   width: 18px;
@@ -565,7 +593,13 @@ body {
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
 }
-.circle__minus:before {
+@media screen and (min-width: 375px) {
+  .advice .zoom .circle__plus:after {
+    top: 50%;
+    left: 25%;
+  }
+}
+.advice .zoom .circle__minus:before {
   display: block;
   content: " ";
   width: 18px;
@@ -576,7 +610,12 @@ body {
   top: 48%;
   left: 19%;
 }
-.find {
+@media screen and (min-width: 375px) {
+  .advice .zoom .circle__minus:before {
+    left: 25%;
+  }
+}
+.advice .find {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -594,13 +633,20 @@ body {
   -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin: auto 10px;
+  margin: auto;
 }
-.find .findIcon {
+@media screen and (min-width: 375px) {
+  .advice .find {
+    width: 42px;
+    height: 42px;
+  }
+}
+.advice .find .findIcon {
   display: inline-block;
   width: 20px;
   height: 20px;
   margin: 0 6px;
+  margin: auto;
 }
 .feedback {
   height: 100%;
@@ -641,7 +687,9 @@ body {
 }
 @media screen and (min-width: 375px) {
   .feedback textarea {
-    width: 50%;
+    width: 80%;
+    height: 50%;
+    margin: 30px auto;
   }
 }
 .feedback_logo img {
@@ -716,10 +764,9 @@ body {
 }
 .send_it {
   display: inline-block;
-  width: 266px;
+  width: 80%;
   height: 40px;
   line-height: 30px;
-  margin: 10px 25px;
   border: 2px solid #44f1a6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -729,13 +776,15 @@ body {
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
-  margin-bottom: 35px;
-  color: #44f1a6;
+  margin-bottom: 70px;
+  color: white;
+  background-color: #44f1a6;
 }
 @media screen and (min-width: 375px) {
   .send_it {
-    width: 405px;
-    height: 60px;
+    width: 80%;
+    height: 40px;
+    margin-bottom: 80px;
   }
 }
 .send_it a {
@@ -915,7 +964,29 @@ body {
   }
 }
 #Stream .streamActions__button {
+  display: inline-block;
+  width: 90%;
+  height: 40px;
   margin: 0 auto;
+  padding: 0 5%;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #44f1a6;
   opacity: 1;
+}
+@media screen and (min-width: 375px) {
+  #Stream .streamActions__button {
+    font-size: 18px;
+  }
+}
+#Stream .streamActions__button p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  line-height: 40px;
+  text-align: center;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

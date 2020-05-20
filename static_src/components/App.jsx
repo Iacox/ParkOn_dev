@@ -26,7 +26,7 @@ import Stream from "./Stream";
 export default class App extends React.Component {
 
 	state={
-		loggedIn:'no',
+		userID:'5eb3d90369e0e7316090df6f',
 	}
 
 render(){
@@ -80,7 +80,7 @@ render(){
 					</Route>
 
 					<Route path="/Feedback">
-						<Feedback/>
+						<Feedback userID={this.state.userID}/>
 					</Route>	
 
 					<Route path="/Stream">

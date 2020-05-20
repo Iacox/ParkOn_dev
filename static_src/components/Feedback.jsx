@@ -7,6 +7,7 @@ import axios from 'axios';
 
 export default class Feedback extends React.Component {
 
+
     state={
         textareaInput:' ',
         feedbackSended:false,
@@ -22,63 +23,50 @@ export default class Feedback extends React.Component {
     };
 
 
-
-
     feedbackSend = () => {
-        console.log("click");
-        const feedbackText = this.state.textareaInput;
-        this.setState({feedbackSended:true})
-        
+        axios.post(`http://localhost:3000/api/mail/${this.props.userID}`,{
+          "to": "Info.ParkOn@mail.ru",
+          "subject": "Тестовое письмо для проекта",
+          "text": `${this.state.textareaInput}`,
+          "html": `<div style='border: 2px solid green;>${this.state.textareaInput}<br/><strong>${this.props.userID}<strong></div>`
+        })
+        .then((response)=>{
 
-
-        const url = 'https:\//example.com/profile';
-const data = { text: this.state.textareaInput };
-
-try {
-    const response = fetch(url, {
-            mode:'no-cors',
-          method: 'POST', // или 'PUT'
-          body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
-          headers: {
-          'Content-Type': 'application/json'
-          }
-  });
-    
-    const json = response.json();
-                console.log('Успех:', JSON.stringify(json));
-        } catch (error) {
-                console.error('Ошибка:', error);
-        };
-        
-}
-
+        this.setState({feedbackSended:true});
+        alert('Ваше обращение отправлено!');
+          },
+            (error) => {  
+            alert('Что-то пошло не так.Обращение не отправлено');
+            }
+        )
+    }
 
 
     render(){
         return <div className="feedback">
-        
-        <div className="feedback_header">
-            <div className="feedback_logo">
-                <img src={logo} alt="logo"/>
-            </div>
-            <div className="close"></div>
-        </div>
+                    <div className="feedback_header">
+                  
+                        <div className="feedback_logo">
+                          <img src={logo} alt="logo"/>
+                        </div>
+                  
+                       <div className="close" onClick={()=>{window.location="/Personal"}}></div>
+                    </div>
             <p className="feedbackText">Обращение</p>
             
 
             
             <textarea  name="FeedbackArea"  cols="30" rows="10" style={ {resize:"none"} }
-             placeholder="Вы можете оставить отзыв, сообщить о неполадке или просто пообщаться с нами;) "
-             onChange={ ()=>{this.textareaInput(event)} }
-             ></textarea> 
+                       placeholder="Вы можете оставить отзыв, сообщить о неполадке или просто пообщаться с нами;) "
+                       onChange={ ()=>{this.textareaInput(event)} }>
+                       </textarea> 
             
 
-            <button className="send send_it"
-            onClick={()=>{this.feedbackSend()}} 
-            style={{backgroundColor:'none'}}>
-                         Отправить 
-            </button>                                             
-        </div>
+            <button className="send_it"
+                    onClick={()=>{this.feedbackSend()}} >
+                Отправить 
+            </button>
+          </div>
       
         }
       }
