@@ -1098,6 +1098,7 @@ body {
   margin: 45px 0;
   font-size: 20px;
   padding: 5px;
+  color: white;
 }
 .linkpersonal .email_personal input::-webkit-input-placeholder {
   font-size: 16px;
@@ -1194,11 +1195,12 @@ body {
   width: 100vw;
   height: 100vh;
 }
-#Stream canvas {
+#Stream #canvas {
   display: inline-block;
   width: 90%;
   padding: 20px 5%;
   text-align: center;
+  border-radius: 40px;
 }
 #Stream .player {
   position: relative;
@@ -1210,7 +1212,6 @@ body {
   position: absolute;
   top: 20px;
   left: 16px;
-  border: 2px solid purple;
   width: 89%;
   height: 65%;
   -webkit-box-orient: horizontal;
@@ -1223,34 +1224,40 @@ body {
   border: 1px solid cyan;
   width: 14px;
   height: 18px;
-  -webkit-transform: rotateZ(30deg);
-          transform: rotateZ(30deg);
   margin: 2px;
 }
 #Stream .player .NeuroMask .NM_item_1 {
   position: absolute;
   left: 70px;
   bottom: 27px;
+  -webkit-transform: rotateZ(27deg);
+          transform: rotateZ(27deg);
 }
 #Stream .player .NeuroMask .NM_item_2 {
   position: absolute;
-  left: 86px;
-  bottom: 24px;
+  left: 87px;
+  bottom: 23px;
+  -webkit-transform: rotateZ(27deg);
+          transform: rotateZ(27deg);
 }
 #Stream .player .NeuroMask .NM_item_3 {
   position: absolute;
-  left: 100px;
-  bottom: 20px;
+  left: 102px;
+  bottom: 19px;
+  -webkit-transform: rotateZ(24deg);
+          transform: rotateZ(24deg);
 }
 #Stream .player .NeuroMask .NM_item_4 {
   position: absolute;
-  left: 115px;
-  bottom: 16px;
+  left: 117px;
+  bottom: 15px;
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
 }
 #Stream .player .NeuroMask .NM_item_5 {
   position: absolute;
-  left: 151px;
-  bottom: 12px;
+  left: 153px;
+  bottom: 10px;
   -webkit-transform: rotateZ(0deg);
           transform: rotateZ(0deg);
 }

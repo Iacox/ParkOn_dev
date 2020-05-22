@@ -128,7 +128,7 @@ export default class Stream extends React.Component {
 
 
 
-                <div className='NeuroMask'>
+                <div className='NeuroMask' style={this.state.portID != ' ' ? {display:"block"}:{display:"none"}}>
                   <span className="NM_item NM_item_1"></span>
                   <span className="NM_item NM_item_2"></span>
                   <span className="NM_item NM_item_3"></span>

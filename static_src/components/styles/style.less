@@ -881,6 +881,7 @@ margin:20px 0;
       margin: 45px 0;
       font-size: 20px;
       padding: 5px;
+      color: white;
       &::placeholder{
         font-size: 16px;
         color: #B4B4B4;
@@ -956,11 +957,12 @@ margin:20px 0;
 
 
 #Stream{
-  canvas{
+  #canvas{
     display:inline-block;
     width: 90%;
     padding: 20px 5%;
     text-align: center;
+    border-radius: 40px;
   }
   .player{
     position: relative;
@@ -969,7 +971,6 @@ margin:20px 0;
         position: absolute;
         top: 20px;
         left: 16px;
-        border:2px solid purple;
         width: 89%;
         height: 65%;
         flex-direction: row;
@@ -978,32 +979,35 @@ margin:20px 0;
         border: 1px solid cyan;
         width: 14px;
         height: 18px;
-        transform: rotateZ(30deg);
         margin: 2px;
         &_1{
         position: absolute;
         left: 70px;
         bottom:27px;
+        transform: rotateZ(27deg);
         }
         &_2{
         position: absolute;
-        left: 86px;
-        bottom:24px;
+        left: 87px;
+        bottom:23px;
+        transform: rotateZ(27deg);
         }
         &_3{
         position: absolute;
-        left: 100px;
-        bottom:20px;
+        left: 102px;
+        bottom:19px;
+        transform: rotateZ(24deg);
         }
         &_4{
         position: absolute;
-        left: 115px;
-        bottom:16px;
+        left: 117px;
+        bottom:15px;
+        transform: rotateZ(20deg);
         }
         &_5{
         position: absolute;
-        left: 151px;
-        bottom:12px;
+        left: 153px;
+        bottom:10px;
         transform: rotateZ(0deg);
         }
         &_6{
