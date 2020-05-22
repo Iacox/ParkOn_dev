@@ -127,6 +127,16 @@ export default class Stream extends React.Component {
                </button>          
 
 
+
+                <div className='NeuroMask'>
+                  <span className="NM_item NM_item_1"></span>
+                  <span className="NM_item NM_item_2"></span>
+                  <span className="NM_item NM_item_3"></span>
+                  <span className="NM_item NM_item_4"></span>
+                  <span className="NM_item NM_item_5"></span>
+                  <span className="NM_item NM_item_6"></span>
+                </div>
+
           </div>
 
         </div>

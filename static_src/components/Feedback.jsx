@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import {Link} from "react-router-dom";
-import logo from "./img/logo.png";
+import back_personal from './img/back_personal.png';
+import sup_icon from "./img/sup_icon.png";
 import axios from 'axios';
 
 
@@ -45,15 +46,13 @@ export default class Feedback extends React.Component {
     render(){
         return <div className="feedback">
                     <div className="feedback_header">
-                  
-                        <div className="feedback_logo">
-                          <img src={logo} alt="logo"/>
-                        </div>
-                  
-                       <div className="close" onClick={()=>{window.location="/Personal"}}></div>
-                    </div>
-            <p className="feedbackText">Обращение</p>
-            
+                        
+                        <Link to="/Personal" className="backToPersonal">
+                          <img src={back_personal} />
+                        </Link>
+                          <p style={{color:"white",fontSize:'22px',margin:0}}>Обратная связь</p>
+                        <img src={sup_icon}/>
+                       </div>
 
             
             <textarea  name="FeedbackArea"  cols="30" rows="10" style={ {resize:"none"} }
