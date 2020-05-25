@@ -9,22 +9,19 @@ import private_personal from './img/private_personal.png'
 
 export default class Personal extends React.Component {
 
-    state={
-        
-    };
 
-    
+
 
 
     render(){
+const {visibility,personalShow} = this.props;
         return (
-        <div className="personal">
+        <div className="personal" style={visibility ? {right:'0'} : {right:'-100%'}}>
             <div className="personal_top">
                 <div className="personal_header">
                 
                       <p>Меню</p>
-                  <Link className="close" to="/MapModule" >
-                        </Link>    
+                  <span className="close" onClick={ ()=>{personalShow()} } />   
                 </div>  
             </div>
             
@@ -34,24 +31,24 @@ export default class Personal extends React.Component {
             <div className="linkpersonal">
           <div className="linkList">
             <div className="personal_link">
-                    <img className="personal_icons" src={private_personal}/>
                         <Link to="/Personalroom" >
-                              Личный кабинет
+                    <img className="personal_icons" src={private_personal}/>
+                            <p>Личный кабинет</p>
                         </Link>                                
                     </div>
 
                     <div className="personal_link">
-                    <img className="personal_icons" src={about_icon}/>
                         <Link to="/About" >
-                              О приложении
+                    <img className="personal_icons" src={about_icon}/>
+                            <p>О приложении</p>
                         </Link>                       
                                 
                     </div>
 
                     <div className="personal_link">    
-                    <img className="personal_icons" src={learn_icon}/>
                         <Link to="/Letstraining" >
-                              Обучение
+                    <img className="personal_icons" src={learn_icon}/>
+                             <p> Обучение</p>
                         </Link>
                               
                     </div>          
@@ -59,9 +56,9 @@ export default class Personal extends React.Component {
                         
                         
                     <div className="personal_link bottom">
-                    <img className="personal_icons" src={sup_icon}/>
                           <Link to="/Feedback" >
-                                 Обратная связь
+                    <img className="personal_icons" src={sup_icon}/>
+                              <p>   Обратная связь</p>
                           </Link>
                               
                     </div>

@@ -29,20 +29,27 @@ self.addEventListener('install', function(event) {
                   // Получаем данные из манифеста (они кэшируются)
                   fetch('manifest/manifest.json')
                       .then(response => {
+                        console.log(response);
                           response.json()
                       })
                       .then(assets => {
                       // Открываем и кэшируем нужные страницы и файлы
                           const urlsToCache = [
-                              '',
-                           '/App/*',
-                           '/MainScreen/*',
-                           '/Welcome/*',
-                           '/EmailValidation/*',
-                           '/PhoneValidation/*',
-                           '/Training/*',
-                           '/Letstraining/*',
-                           '/Map/*',
+                            '/ ',
+                           '/App',
+                           '/About',
+                           '/MainScreen',
+                           '/Welcome',
+                           '/EmailValidation',
+                           '/EmailRegistration',
+                           '/PhoneValidation',
+                           '/Phonereg',
+                           '/Changereg',
+                           '/Changeauto',
+                           '/Training',
+                           '/Letstraining',
+                           '/Feedback',
+                           '/MapModule',
                           ];
                           cache.addAll(urlsToCache);
                           console.log('cached');

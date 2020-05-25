@@ -32,15 +32,15 @@ export default class Stream extends React.Component {
 
 
     // getStream = () => {
-      // console.log('ID потока получен');
-      // axios.get('http:\//localhost:3000/api/stream');
+    //   console.log('ID потока получен');
+    //   axios.get('http:\//localhost:3000/api/stream');
     // };
-// 
-// getUser = () => {
-// console.log('User ID получен');
-        // return axios.get('http:\//localhost:3000/api/user/');
+
+    // getUser = () => {
+    // console.log('User ID получен');
+    //     return axios.get('http:\//localhost:3000/api/user/');
     // };
-// 
+
      getStreamPort = () => {
         console.log('Порт получен');
        axios.post(`http:\//localhost:3000/api/stream/open/${this.state.streamID}`,{ id:`${this.state.userID}`})
@@ -49,26 +49,8 @@ export default class Stream extends React.Component {
             this.setState({portID:response.data})
        });
       };
-// 
-// 
-// 
-    // requestsAxios = () => {
-      // console.log('requests start')
-      // axios.all([this.getStream(), this.getUser()])
-      // .then (axios.spread( (strm,usr) => {
-        // const strmID = strm.data[5]._id;
-        // console.log("STREAM:" + strmID);
-        // const usrID = usr.data[0]._id ;
-        // this.setState({streamID:strmID,userID:usrID});
-        // console.log('stream ID и User Id записаны');
-        // this.getStreamPort();
-        // console.log('Requests ended');
-      // }));
-    // };
-// 
-// 
+
 //--------------------------------------------------------------------------//
-// 
 
 
     playerRendering = () => {
@@ -128,14 +110,14 @@ export default class Stream extends React.Component {
 
 
 
-                <div className='NeuroMask' style={this.state.portID != ' ' ? {display:"block"}:{display:"none"}}>
+               {/* <div className='NeuroMask' style={this.state.portID != ' ' ? {display:"block"}:{display:"none"}}>
                   <span className="NM_item NM_item_1"></span>
                   <span className="NM_item NM_item_2"></span>
                   <span className="NM_item NM_item_3"></span>
                   <span className="NM_item NM_item_4"></span>
                   <span className="NM_item NM_item_5"></span>
                   <span className="NM_item NM_item_6"></span>
-                </div>
+                </div>*/}
 
           </div>
 

@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 import MainScreen from './MainScreen';
@@ -13,6 +14,7 @@ import Training from "./Training";
 import Letstraining from "./Letstraining";
 import Feedback from "./Feedback";
 import Personal from "./Personal";
+import Personalroom from "./Personalroom";
 import About from "./About";
 import Changereg from "./Changereg";
 import Emailregistration from "./Emailregistration";
@@ -20,7 +22,6 @@ import Changeauto from "./Changeauto";
 import Phonereg from "./Phonereg";
 import Stream from "./Stream";
 import Menutraining from "./Menutraining";
-import Personalroom from "./Personalroom";
 
 
 
